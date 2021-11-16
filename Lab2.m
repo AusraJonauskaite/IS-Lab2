@@ -52,6 +52,13 @@ for index = 1:length(x)
     y4_1 = 1/(1+exp(-v4_1));
     y5_1 = 1/(1+exp(-v5_1));
     y6_1 = 1/(1+exp(-v6_1));
+    %3.2 Antrojo sluoksnio neuronui
+    v1_2 = y1_1*w11_2+y2_1*w12_2+y3_1*w13_2+y4_1*w14_2+y5_1*w15_2+y6_1*w16_2+b1_2;
+    %pritaikoma tiesine aktyvavimo funkcija isejime
+    %y = y1_2
+    y = v1_2;
+    %3.3 skaiciuojame klaida
+    e = d(index) - y;
 end
 
 
